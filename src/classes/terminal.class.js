@@ -9,6 +9,7 @@ class Terminal {
             const {LigaturesAddon} = require("xterm-addon-ligatures");
             const {WebglAddon} = require("xterm-addon-webgl");
             this.Ipc = require("electron").ipcRenderer;
+            const remote = require("@electron/remote");
 
             this.port = opts.port || 3000;
             this.cwd = "";

@@ -203,6 +203,8 @@ function createWindow(settings) {
         }
     });
 
+    require("@electron/remote/main").enable(win.webContents);
+
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'ui.html'),
         protocol: 'file:',
